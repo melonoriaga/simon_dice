@@ -54,17 +54,12 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.numeric.js"></script>
         <script>
-            // $(function(){
-            //     document.addEventListener('keydown', function (ev) {
-            //         console.log(ev.keyCode);
-            //     })
-            // })
-
             const niveles = 15;
-            let keys      = generateKeys();
 
-            function generateKeys () {
+            let keys = generateKeys(niveles);
 
+            function generateKeys (niveles) {
+                return new Array(niveles).fill(0).map(generateKeysRandom);
             }
 
             function generateKeysRandom () {
